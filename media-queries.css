@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.PC, .TABLET, .MOBLIE{
+    text-align: center;
+    display: none;
+    line-height: 50px;
+}
+/* PC */
+@media (min-width: 1024px) {
+    .PC{
+        display: block;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .TABLET{
+        display: block;
+    }
+}
+
+/* Mobile */
+@media (max-width: 740px) {
+    .MOBLIE{
+        display: block;
+    }   
+}
+

@@ -1,0 +1,475 @@
+/* reset css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth; /* phần này là giúp cuộn trang mượt hơn khi nhấn vô nav */
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* comon */
+.clear{
+    clear: both;
+}
+.text-white{
+    color: white;
+    }
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-half{
+    width: 50%;
+}
+.col-full{
+    width: 100%;
+}
+.mt-8{
+    margin-top: 8px;
+}
+.mt-16{
+    margin-top: 16px;
+}
+/* comon */
+/* 
+1. vị trí
+2. kích thước
+3. màu sắc 
+4. kiểu dáng( font, kiểu dáng, hình dạng....)
+*/
+
+#including{
+
+}
+
+#header{
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    /* thuộc tính khi phần tử con tràn ra ngoài sẽ bị cắt biến mất */
+    /* overflow: hidden; */
+}
+#nav{
+    display: inline-block;
+}
+
+#nav > li{
+    display: inline-block;
+    position: relative;
+}
+#nav > li > a{
+    color: white;
+    text-transform: uppercase;
+}
+#nav li:hover .subnav{
+    display: block !important; /*chưa hiểu chỗ nào tại sao đặt display: block thì hover nó hiện ra*/
+}
+#nav li a{
+    /* xóa gạch chân ở dưới */
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: inline-block;
+}
+#nav > li:hover > a{
+    background-color: #ccc !important;
+    color: black;
+    display: inline-block;
+}
+#nav .subnav{                           
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav .subnav a{
+    color: black;
+    padding: 0 12px;
+    line-height: 38px;
+}
+#nav .subnav li:hover{
+    color: black;
+    background-color: #ccc !important;
+    display: block;
+}
+#nav .fa-chevron-down{
+    font-size: 14px;
+}
+
+/* begin responsive mobile-icon */
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    padding: 12px 24px;
+    display: none;
+}
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+#header .mobile-menu-btn:hover .mobile-menu-icon{
+    color: black;
+}
+#header .mobile-menu-btn .mobile-menu-icon{
+    color: white;
+    font-size: 20px;
+}
+/* end responsive mobile-icon */
+
+
+#header #search-bt{
+    float: right;
+    padding: 0 21px;
+}
+#header #search-bt:hover{
+    background-color: #f44336;
+    cursor: pointer;
+}
+#header #search-bt .fa-magnifying-glass{
+    color: white;
+    font-size: 20px;
+    line-height: 46px;  
+}
+
+
+/* phần begin làm sider */
+#slider{
+    margin-top: 46px;   
+    padding-top: 50%; 
+    background-color: #ccc;
+    background-image: url("/assets/img/chicago.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+}
+#slider .text-content{
+    color: white;
+    position: absolute;
+    bottom: 47px;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+#slider .text-heading{
+    font-weight: 500;
+    font-size: 24px;
+}
+#slider .text-description{
+    font-size: 15px;
+    margin-top: 25px;
+}
+/* phần end làm sidersider */
+
+
+/* css begin content  */
+#content{
+    
+}
+/* css begin the band- tour- contac */
+#content .content-section{
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 16px 112px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+#content .section-heading{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;  /* độ mờ dày, mỏng của chữ cái*/
+    letter-spacing: 4px;  /* Khoảng cách các chữ cái*/
+}
+#content .section-sub-heading{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.5; /* độ mờ nhạt từ 0-1*/
+}
+#content .about-text{
+    font-size: 15px;
+    margin-top: 25px;
+    text-align: justify; /* justify là giúp chữ đều hai bên */
+    line-height: 1.4; /* khoảng cách từng dòng */
+}
+/* css end the band- tour-contac */
+ 
+/* css phần hình ảnh THE BAND */
+#content .member-item{
+    /* display: flex; */
+    width: 33.33333%;
+    text-align: center;
+}
+#content .member-list{
+    display: flex;
+    margin-top: 48px;
+}
+#content .member-name{
+    font-size: 15px;
+}
+#content .member-img{
+    width: 154px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+/* css begin tour  */
+
+/* .text-white{
+color: white;
+} */
+.tour-section{
+    background-color: #000;
+}
+.ticket-list{
+    background-color: white;
+    margin-top: 47px;
+    border: 1px solid #ccc;
+    
+}
+.tour-section li{
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+    /* xóa dấu chấm của thẻ li */
+    list-style: none; 
+}
+.tour-section .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+.tour-section .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+}
+/* css end tour */
+/* css begin img phần tour */
+.place-list{
+    margin-top: 32px;
+    /* margin-left: -8px;
+    /* margin-right: -8px; */  
+    padding-bottom: 48px;
+}
+.place-item{
+    /* display: flex; */
+
+    float: left;
+    padding: 0 8px;   
+    width: 33.33333%;
+}
+.place-list .place-img{
+    width: 100%;
+    display: block;
+}
+.place-list .place-img:hover{
+    opacity: 0.6;
+}
+.place-list .place-body{
+    background-color: white;
+    padding: 16px 16px;
+    font-size: 15px;
+}
+.place-list .place-heading{
+    font-size: 15px;
+    font-weight: bolder;
+}
+.place-list .place-time{
+    margin-top: 15px;
+    opacity: 0.60;
+}
+.place-list .place-desc{
+    margin-top: 15px;
+    line-height: 1.4;
+}
+.place-list .place-buy-btn{
+    background-color: #000;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+}
+.place-list .place-buy-btn:hover{
+    color: black;
+    background-color: #ccc;
+}
+/* css end img phần tour  */
+
+/* css phần java scrip của section tour click vào ticket */
+.model{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* display: flex; tại sao dùng display: flex thì hắn lại ở giữa màn hình */
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+/* .model .open{
+    display: flex;
+} */
+.model-container{
+    background-color: white;
+    width: 900px;
+    min-height: 200px;      
+    position: relative;
+}
+.model-container .model-header{
+    background-color: #009688 ;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 4px;
+}
+.icon-model-suitcase{
+    margin-right: 16px;
+}
+.model-close .icon-model-xmark{
+    position: absolute;
+    color: white;
+    right: 0;
+    top: 0;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 24px;
+    opacity: 0.9;
+}
+.model-close .icon-model-xmark:hover{
+    color: black;
+    background-color: #ccc;
+}
+.model-body{
+    padding: 16px;
+}
+.model-label{
+    display: block;
+    font-size: 15px; 
+    margin-bottom: 15px;   
+}
+.model-body .model-input{
+    padding: 11px;
+    width: 100%;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.model-body #pay-ticket{
+    background-color: #009688;
+    border: none;
+    color: white;
+    width: 100%;
+    font-size: 15px;
+    padding: 18px;
+    text-transform: uppercase;
+}
+.model-body #pay-ticket:hover{
+    color: black;
+    opacity: 0.9;
+    cursor: pointer;
+} 
+.model-footer .model-help{
+    font-size: 15px;
+    padding: 12px;
+    text-align: right;
+}
+.model-footer .model-p{
+    color: #2196F3;
+}
+/* css begin section contac */
+.contac-content{
+    margin-top: 48px;
+}
+.contac-info{
+    font-size: 18px;
+    line-height: 1.5;   
+}
+.contac-info i{
+    width: 30px;
+    display: inline-block;
+}
+.contact-form{
+    font-size: 15px;
+}
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    /* outline là khi nhấn vào input cái boder sẽ k hiện màu */
+    outline: none;
+    
+}
+.contact-form .form-submit-btn{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    padding: 10px 16px;
+    float: right;
+}
+.contact-form .form-submit-btn:hover{
+    background-color: #ccc;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+/* css end section contac  */
+/* css end content  */
+
+/* css begin map */
+.map-section img{
+    width: 100%;
+    margin-top: 100px;
+}
+/* css end map */
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+#footer .social{
+    font-size: 24px;
+}
+#footer .social a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+#footer .social a:hover{
+    opacity: 0.5;
+}
+#footer .copyright{
+    margin-top: 15px;
+}
+#footer .copyright a{
+    color: rgba(0, 0, 0, 0.6);
+    
+}
