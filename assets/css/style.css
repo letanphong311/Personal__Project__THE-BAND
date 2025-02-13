@@ -80,6 +80,7 @@ html{
     line-height: 46px;
     padding: 0 24px;
     display: inline-block;
+    list-style: none;
 }
 #nav > li:hover > a{
     background-color: #ccc !important;
@@ -93,16 +94,19 @@ html{
     left: 0;
     background-color: white;    
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    list-style: none;
 }
 #nav .subnav a{
     color: black;
     padding: 0 12px;
     line-height: 38px;
+    list-style: none;
 }
 #nav .subnav li:hover{
     color: black;
     background-color: #ccc !important;
     display: block;
+    list-style: none;
 }
 #nav .fa-chevron-down{
     font-size: 14px;
